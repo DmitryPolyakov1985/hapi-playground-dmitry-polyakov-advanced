@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    padding: 30px;
+}
+
+.wrapper {
+    width: 80vw;
+    margin: 0 auto;
+    /* background-color: red; */
+}
+
+.practitioners-container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    /* border: 1px solid #999; */
+    border-radius: 20px;
+}
+
+.card {
+    /* border: 2px solid blue; */
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 60px;
+    margin: 10px 11px;
+    width: 30%;
+    min-width: 220px;
+    max-width: 300px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.photo-container {
+    width: 150px;
+}
+
+.photo-container img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.practitioner-card {
+    width: 33%;
+    display: grid;
+}
+
+.practitioner-photo {
+    width: 100%;
+}
+
+.name {
+    margin: 20px 0;
+}
+
+.delete-btn {
+    margin: 20px 0;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(24, 67, 148);
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    box-shadow: 1px 4px 5px 3px rgb(141, 149, 153);
+    outline: none;
+}
+
+.delete-btn:focus,
+.delete-btn:hover {
+    background-color: rgb(73, 103, 158);
+    box-shadow: 0px 4px 4px 1px rgb(141, 149, 153);
+    transform: scale(0.99);
+    
+}
+
+@media(max-width: 800px) {
+    .card {
+        width: 30%;
+        margin: 20px;
+        padding: 30px;
+        
+    }
+    .practitioners-container {
+        padding: 60px;
+    }
+}

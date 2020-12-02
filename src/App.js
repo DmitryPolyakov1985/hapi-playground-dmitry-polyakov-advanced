@@ -1,15 +1,20 @@
-import React, { Component } from "react";
-import { getPatients } from "./services";
+import React from "react";
+// import { getPatients } from "./services";
+import Practitioner from './components/Practitioner';
+import ErrorBoundary from './components/ErrorBoundary';
 
-class App extends Component {
-  componentDidMount() {
-    getPatients().then((res) => {
-      console.log(res);
-    });
-  }
-  render() {
-    return <p>Check the console!</p>;
-  }
+const App = () => {
+  // componentDidMount() {
+  //   getPatients().then((res) => {
+  //     console.log(res);
+  //   });
+  // };
+
+  return(
+      <ErrorBoundary>
+        <Practitioner />
+      </ErrorBoundary>
+  );
 }
 
 export default App;
