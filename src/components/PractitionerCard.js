@@ -21,7 +21,7 @@ const PractitionerCard = ({practitioners, loading, deletePractitioner}) => {
                                     <div className="photo-container">
                                         <img src={photo} alt=""/>
                                     </div>
-                                    <p className='name'><strong>Name:<br /></strong> {name}</p>
+                                    <p className='name'><strong>Name:<br /></strong> {name.trim() !== 'undefined' ? name : 'N/A'}</p>
                                     <p><strong>Genger:</strong> {gender ? gender : 'N/A'}</p>
                                     <p><strong>DOB:</strong> {dob ? dob : 'N/A'}</p>
                                     <button onClick={() => {if(window.confirm('Are you sure to delete this record?')){ deletePractitioner(practitioner.id)};}} className='delete-btn'>delete</button>
